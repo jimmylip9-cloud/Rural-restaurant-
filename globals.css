@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #FFFBF5;
+    --bg-secondary: #F5ECE0;
+    --text-primary: #1C1311;
+    --text-secondary: #6B5750;
+    --accent-primary: #D9381E;
+    --accent-secondary: #F59E0B;
+    --dark-surface: #1F1614;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFFBF5;
+    color: #1C1311;
+    font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-fraunces), Georgia, serif;
+  }
+
+  .font-mono {
+    font-family: var(--font-space-mono), monospace;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
